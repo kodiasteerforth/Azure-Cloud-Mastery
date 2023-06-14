@@ -1,0 +1,21 @@
+Azure provides various storage services that offer scalable, secure, and highly available storage solutions for different use cases. The building blocks of Azure storage services include the following:
+
+# Azure Blob Storage
+Blob Storage is designed for storing large amounts of unstructured data, such as documents, images, videos, and logs. It provides a simple REST-based interface for accessing and managing objects. Blob storage offers different access tiers, including hot, cool, and archive, with varying storage costs and access frequencies.
+
+# Azure File Storage
+File Storage provides fully managed file shares that can be accessed over the Server Message Block (SMB) protocol. It enables you to create a shared file system that can be accessed by multiple virtual machines (VMs) or on-premises systems. Azure File Storage is suitable for scenarios where you need shared file access across different platforms.
+
+# Azure Queue Storage
+Queue Storage is a messaging service that allows decoupling of different components in a distributed system. It enables asynchronous communication and processing between different parts of an application. Queue Storage is commonly used for building reliable and scalable systems, handling background jobs, and implementing task orchestration.
+
+# Azure Table Storage
+Table Storage is a NoSQL key-value store that provides schemaless storage for structured data. It is suitable for storing large amounts of semi-structured or structured data, such as logs, sensor data, and metadata. Table Storage offers high scalability and low latency for read and write operations.
+
+# Azure Disk Storage
+Disk Storage provides durable and high-performance block storage for virtual machines. It offers different disk types, such as Standard HDD, Standard SSD, and Premium SSD, with varying performance characteristics and cost. Disk Storage is used for persistent storage for VMs, enabling data persistence even after the VMs are deallocated or restarted.
+
+# Azure Data Lake Storage
+Data Lake Storage is a scalable and secure data lake solution for big data analytics. It is optimized for handling large volumes of structured and unstructured data. Data Lake Storage integrates with various analytics services, such as Azure Databricks, Azure HDInsight, and Azure Synapse Analytics, enabling powerful data processing and analysis.
+
+These Azure storage services can be used individually or in combination to build robust and scalable storage solutions in the cloud. They provide various features like scalability, durability, security, and integration with other Azure services, making them suitable for a wide range of applications and scenarios.
