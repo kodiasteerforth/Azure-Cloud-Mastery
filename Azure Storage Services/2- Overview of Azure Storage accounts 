@@ -80,11 +80,11 @@ Azure storage accounts offer different access tiers to provide flexibility in da
 - Pricing: The hot access tier has a higher storage cost compared to the cool access tier but lower data retrieval costs.
 
 # Cool Access Tier
-- Features: The cool access tier is suitable for data that is infrequently accessed but requires quick access when needed.
+- Features: The cool access tier is suitable for data that is infrequently accessed but requires quick access when needed.It is optimized for storing data that is infrequently accessed and stored for at least 30 days.
 - Pricing: The cool access tier has a lower storage cost compared to the hot access tier but higher data retrieval costs.
 
 # Archive Access Tier
-- Features: The archive access tier is designed for long-term retention of rarely accessed data with the lowest storage costs.
+- Features: The archive access tier is designed for long-term retention of rarely accessed data with the lowest storage costs.Archive storage is optimized for storing data that is rarely accessed and stored for at least 180 days with flexible latency requirements (on the order of hours).
 - Pricing: The archive access tier has the lowest storage cost but higher data retrieval costs and additional retrieval time.
 
 The access tiers are available for Azure Blob storage and Azure Data Lake Storage Gen2. You can choose the appropriate access tier for your data based on its usage patterns and cost considerations. For example, frequently accessed data that requires fast retrieval would be stored in the hot access tier, while data that is rarely accessed can be stored in the cool or archive access tiers to optimize costs.
