@@ -1,0 +1,33 @@
+Azure Disk storage is a cloud-based storage service provided by Microsoft Azure that enables you to attach durable and high-performance disks to your virtual machines (VMs). Here's an overview of Azure Disk storage:
+
+# Unmanaged disks
+This  are the traditional type of disks that have been used by VMs. With these disks, you create your own storage account and specify that storage account when you create the disk. Make sure you don't put too many disks in the same storage account, because you could exceed the scalability targets of the storage account (20,000 IOPS, for example), resulting in the VMs being throttled.
+
+# Managed Disks 
+This handles the storage account creation/management in the background for you, and ensures that you do not have to worry about the scalability limits of the storage account. You simply specify the disk size and the performance tier (Standard/Premium), and Azure creates and manages the disk for you.
+
+# Persistent Block Storage
+Azure Disk storage provides persistent block-level storage for Azure VMs. It allows you to store and retrieve data on disks, similar to traditional hard drives, providing durability and data persistence.
+
+# High Performance
+Azure Disk storage offers both Standard and Premium disk types. Premium disks use solid-state drives (SSDs) and deliver high-performance storage with low latency and high IOPS (Input/Output Operations Per Second). Standard disks use magnetic drives and provide cost-effective storage with moderate performance characteristics.
+
+# Disk Sizes
+Azure Disk storage offers a range of disk sizes to meet your specific requirements. The sizes range from small sizes (such as 4 GB) to large sizes (up to several terabytes).
+
+# Disk Types
+Azure Disk storage provides two types of managed disks: **OS disks** and **data disks**. OS disks are attached to VMs and contain the operating system and boot files, while data disks are used for additional storage and data persistence.
+
+# Availability Options
+Azure Disk storage offers different availability options to ensure high availability and resilience. You can choose from options like **Zone Redundant Storage (ZRS)**, **Geo Redundant Storage (GRS)**, and **Read-Access Geo Redundant Storage (RA-GRS)** to replicate and protect your disks across different Azure regions.
+
+# Snapshots and Disk Images
+Azure Disk storage allows you to take snapshots of your disks, which capture the point-in-time state of the disk. Snapshots can be used for backup, disaster recovery, or creating disk images for VM deployments.
+
+# Managed Disk Backups
+Azure Disk storage provides built-in backup capabilities for managed disks. You can create backups of your disks and restore them as needed, enabling data protection and recovery.
+
+# Integration with Azure Virtual Machines
+Azure Disk storage seamlessly integrates with Azure VMs. You can attach and detach disks to VMs, resize disks, and manage disk lifecycle operations using Azure management tools and APIs.
+
+Azure Disk storage is suitable for a wide range of scenarios, such as running virtual machines, hosting databases, deploying enterprise applications, and enabling data-intensive workloads. It provides reliable and performant block-level storage for your Azure VMs, offering flexibility, scalability, and data durability.
