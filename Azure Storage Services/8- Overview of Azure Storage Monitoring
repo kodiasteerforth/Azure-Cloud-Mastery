@@ -1,0 +1,67 @@
+# Overview of Azure Storage Monitoring 
+Azure Storage monitoring provides a comprehensive set of tools and features to monitor the health, performance, and usage of your Azure Storage resources. Here's an overview of Azure Storage monitoring:
+
+# Metrics
+Azure Storage metrics provide insights into the performance and health of your storage resources. You can collect metrics such as ingress and egress data, transactions, availability, and latency. These metrics help you understand the usage patterns, identify performance bottlenecks, and optimize your storage resources.
+
+# Azure Monitor
+Azure Monitor is a centralized monitoring service that collects and analyzes telemetry data from various Azure resources, including Azure Storage. It allows you to configure alerts, create custom dashboards, and perform advanced analytics on your storage metrics. Azure Monitor provides a unified view of your storage resources and helps you identify issues or anomalies in real-time.
+
+# Diagnostic Logs
+Azure Storage provides diagnostic logs that capture detailed information about the operations and events occurring within your storage accounts. You can enable diagnostic logging and configure the retention period for these logs. The logs can be integrated with Azure Monitor or exported to other tools for analysis and troubleshooting.
+
+# Alerts
+Azure Storage monitoring allows you to set up alerts based on specific conditions or thresholds. You can define alert rules for metrics such as storage capacity, availability, and performance. When an alert is triggered, you can receive notifications via email, SMS, or other channels, enabling you to respond promptly to any issues or performance deviations.
+
+# Azure Storage Explorer
+Azure Storage Explorer is a graphical user interface (GUI) tool that provides a convenient way to monitor and manage your Azure Storage resources. It allows you to browse storage accounts, view container and blob properties, monitor storage activity, and perform various management tasks.
+
+# Third-Party Monitoring Tools
+In addition to the built-in monitoring capabilities, you can also leverage third-party monitoring tools and services to monitor Azure Storage. Many popular monitoring and analytics tools, such as Azure Log Analytics, Azure Application Insights, and Azure Data Explorer, provide integration options for monitoring and analyzing Azure Storage data.
+
+By effectively monitoring your Azure Storage resources, you can ensure their optimal performance, detect and resolve issues proactively, and make informed decisions for capacity planning and resource optimization. Azure Storage monitoring tools and features help you gain visibility into your storage environment and maintain the reliability and performance of your storage infrastructure.
+
+# Storage Analytics
+
+# Logging and Metrics
+Azure Storage Analytics enables logging and provides metrics data for your storage account. Logging allows you to trace and analyze requests made to your storage account, while metrics provide insights into usage trends and performance.
+
+# Enabling Storage Analytics
+By default, metrics are enabled when you create a storage account. However, you need to enable logging separately. You can enable Storage Analytics through the Azure portal, REST APIs, or client libraries. For each service (blob, queue, table, file), you can use specific operations to enable Storage Analytics.
+
+# Data Storage
+The aggregated data from Storage Analytics is stored in predefined blobs (for logging) and tables (for metrics) within your storage account. These storage containers are well-known and can be accessed using the respective service APIs.
+
+# Data Limit
+Storage Analytics has a limit of 20 TB for the amount of stored data. This limit is independent of the total limit imposed on your storage account. It's important to monitor and manage your Storage Analytics data to ensure it remains within this limit.
+
+By leveraging Azure Storage Analytics, you can gain valuable insights into your storage account's usage, diagnose issues, and track performance. The logging and metrics data provided by Storage Analytics help you understand the behavior of your storage resources and make informed decisions for optimization and troubleshooting.
+
+# Storage Analytics Logging 
+
+# Logging Request Information
+Storage Analytics logs detailed information about both successful and failed requests made to a storage service. This includes information such as the request type, target resource, status code, latency, and more. These logs are valuable for monitoring individual requests and diagnosing any issues that may arise with the storage service.
+
+# Authentication and Logging Levels
+Storage Analytics logs information for both authenticated and anonymous requests, but at different logging levels. Authenticated requests are logged at a more detailed level, capturing additional information such as the client IP address and authentication details.
+
+# Storage Location for Logs
+All logs generated by Storage Analytics are stored in block blobs within a container named "$logs". This container is automatically created when Storage Analytics is enabled for a storage account. The "$logs" container resides within the blob namespace of the storage account.
+
+# Log Format
+Each log entry is written in a specific format, following the structure of "<service-name>/YYYY/MM/DD/hhmm/<counter>.log". The "service-name" indicates the type of storage service, such as blob, queue, table, or file. The date and time values in the format represent the timestamp when the log was generated. The "<counter>" value ensures uniqueness of each log file.
+
+By leveraging Storage Analytics logging, you can gain insights into the details of requests made to your storage service. These logs help you monitor the performance, diagnose any issues, and analyze the usage patterns of your storage resources. The log files stored in the "$logs" container can be accessed and analyzed using the appropriate storage APIs or other tools and services.
+
+# Storage Analytics Metrics
+
+# Transaction Metrics
+Storage Analytics can store metrics that provide aggregated transaction statistics about requests made to a storage service. These metrics give insights into the overall performance and usage of the storage service. Transaction metrics are recorded at both the hourly and minute levels. The data is collected at the service level (e.g., blob, queue, table) and also at the API operation level, allowing you to analyze the performance of specific operations.
+
+# Capacity Metrics
+Storage Analytics also records capacity metrics that provide data about the storage account's Blob service. These metrics include information such as capacity, container count, and object count. Capacity metrics are recorded daily, giving you an overview of the storage account's capacity utilization and growth.
+
+# Metrics Storage
+All metrics data for each storage service (blob, queue, table) is stored in three reserved tables dedicated to that service. These tables provide a structured format for storing and accessing the metrics data. The specific tables for each service are predefined and maintained by Azure Storage Analytics.
+
+By utilizing Storage Analytics metrics, you can gain insights into the transactional activity, performance, and capacity usage of your storage services. These metrics enable you to monitor and optimize the performance of your storage resources, identify any bottlenecks or anomalies, and make data-driven decisions for scaling and capacity planning. The metrics data can be accessed and analyzed using appropriate storage APIs or integrated with monitoring and analytics tools to visualize and interpret the metrics in a meaningful way.
