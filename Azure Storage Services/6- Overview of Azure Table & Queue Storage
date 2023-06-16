@@ -1,0 +1,91 @@
+# Azure Table storage Overview
+Azure Table storage is a NoSQL key-value store that offers a scalable and flexible solution for storing structured data. It is a part of Azure Storage services and is designed to provide fast and efficient storage for large-scale applications.
+
+# NoSQL Datastore
+Azure Table storage is a NoSQL database, which means it differs from traditional relational databases by not using a fixed schema. It allows for flexible data structures and can handle unstructured or semi-structured data.
+
+# Authenticated Calls
+Azure Table storage accepts authenticated calls, which means that clients need to provide appropriate credentials to access the data. This ensures that only authorized entities can interact with the data stored in the tables.
+
+# Structured, Non-relational Data
+Azure Table storage is suitable for storing structured data that doesn't require complex joins, foreign keys, or stored procedures. It allows for denormalized data models, where data can be stored in a flat structure, enabling fast access and retrieval.
+
+# TBs of Structured Data
+Azure Table storage is capable of storing large amounts of data, ranging from gigabytes to terabytes. It can handle the storage needs of web-scale applications that require massive scalability.
+
+# Clustered Index and Fast Querying
+Azure Table storage provides the ability to create a clustered index on a specific column. This allows for efficient querying and retrieval of data based on that column. It enables fast and optimized data access patterns.
+
+# OData Protocol and LINQ Queries
+Azure Table storage supports the OData protocol, which is a standard for building and consuming RESTful APIs. This allows for easy data access and manipulation using standard HTTP methods. Additionally, developers can use LINQ queries with WCF Data Service .NET Libraries to query and interact with the data in Azure Table storage.
+
+Overall, Azure Table storage is a powerful and scalable NoSQL datastore that is suitable for storing large amounts of structured data, providing fast access, and supporting various querying options and protocols.
+
+# Table Storage concepts
+
+
+# Table
+In Azure Table storage, a table is a collection of entities. Tables are schema-less, meaning each entity in a table can have different sets of properties. You can think of a table as a container for organizing related data.
+
+# Entity
+An entity in Azure Table storage is a collection of properties that represent a single data record. Each entity must have a unique partition key and a unique row key within its table, which together form a primary key. Entities can have additional properties to store data.An entity in Azure Storage can be up to 1MB in size. An entity in Azure Cosmos DB can be up to 2MB in size.
+
+# Partition Key
+The partition key is a property of an entity that determines its physical storage location in Azure Table storage. Partitioning allows for distributing data across multiple storage nodes for scalability. It is important to choose a partition key that evenly distributes the data and supports efficient querying patterns.
+
+# Row Key
+The row key is another property of an entity that, together with the partition key, forms a unique identifier for the entity within its table. It is used to uniquely identify and retrieve a specific entity.
+
+# Properties
+Properties represent the actual data stored within an entity. Each property has a name and a value. Properties can be of various data types such as strings, numbers, dates, and binary data.
+
+# Storage Account
+A storage account in Azure is a logical container that holds all the Azure Storage resources, including Azure Table storage. It provides a unique namespace for accessing and managing storage resources.
+
+# Primary Key
+The combination of the partition key and row key forms a primary key for an entity. It ensures the uniqueness and efficient retrieval of entities within a table.
+
+# Secondary Index
+By default, Azure Table storage supports querying based on the partition key and row key. However, there is no built-in support for secondary indexes. To enable additional query capabilities, you can use secondary index patterns such as materialized views or duplicate data storage.
+
+# Querying
+Azure Table storage allows querying entities based on their partition key, row key, and properties. You can perform simple queries using equality conditions or range queries. For complex queries, you can use advanced techniques like batch transactions and continuation tokens.
+
+# Scalability and Performance
+Azure Table storage is designed to provide high scalability and performance. It can handle massive amounts of data and support high-throughput workloads. By distributing data across multiple partitions, it can handle increased read and write operations.
+
+# Consistency Models
+Azure Table storage offers two consistency models: strong consistency and eventual consistency. Strong consistency ensures that once a write operation is committed, subsequent reads will return the latest data. Eventual consistency allows for lower latency but may have a slight delay in propagating updates across all replicas.
+
+These are some fundamental concepts related to Azure Table storage. Understanding these concepts will help you work with Azure Table storage effectively and design data models that align with your application requirements.
+
+# Table Storage access points
+
+# Azure Table Storage accounts use this format: http://<storage account>.table.core.windows.net/<table>
+
+# Azure Cosmos DB Table API accounts use this format: http://<storageaccount>.table.cosmosdb.azure.com/<table>
+
+# Table Storage queries
+Queries retrieve data from tables.
+• Because a table only has one index, query performance is usually related to the PartitionKey and RowKey properties.
+
+http://<account>.windows.core.net/registrations(PartitionKey=”2011 New York City Marathon__Full”,RowKey=”1234__John__M__55”)
+
+# Azure Queue storage Overview
+
+Azure Queue storage is a cloud-based messaging service provided by Microsoft Azure. It is designed to facilitate asynchronous communication and reliable messaging between different components of a distributed application or system. Here's an overview of Azure Queue storage:
+
+# Azure Queue storage
+Azure Queue storage is a service provided by Microsoft Azure for storing a large number of messages in the cloud. It offers a reliable and scalable messaging solution that can be accessed globally using HTTP and HTTPS protocols.
+
+# Queue and Message Structure
+Azure Queue storage organizes messages in queues. Each queue contains a set of messages. It is important to note that the queue name must be in all lowercase.
+
+# Message Size and Retention
+Each individual message in the queue can be up to 64KB in size. Messages can remain in the queue for a maximum duration of 7 days. After that period, the message will be automatically removed from the queue.
+
+# URL Format
+The URL format for accessing the Azure Queue storage follows the pattern: http://<storage account>.queue.core.windows.net/<queue>. The <storage account> represents the name of your Azure storage account, and <queue> represents the name of the specific queue you want to access.
+
+# Message Retrieval and Visibility
+When a message is retrieved from the queue, it becomes temporarily invisible to other applications for a default duration of 30 seconds. This feature prevents multiple applications from processing the same message simultaneously. If the application completes processing the message within the visibility timeout, it should explicitly delete the message from the queue.
