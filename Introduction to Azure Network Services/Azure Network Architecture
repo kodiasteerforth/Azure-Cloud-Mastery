@@ -1,0 +1,37 @@
+# Azure Network Architecture
+
+Azure Network Architecture refers to the design and structure of the networking components and services within the Microsoft Azure cloud platform. It encompasses various elements that enable secure and efficient communication between resources deployed in Azure, as well as connections to on-premises networks and the internet. 
+
+Key components of Azure Network Architecture include:
+
+# Virtual Networks (VNets)
+Virtual Networks provide isolated network environments in Azure, allowing you to segment and control the network traffic between your resources. VNets are the foundation of Azure networking and enable the creation of subnets, IP address ranges, and network security groups.
+
+# Subnets
+Subnets are subdivisions within a VNet and allow you to further organize and secure your resources. By placing resources in different subnets, you can apply specific network policies and control traffic flow between subnets.
+
+# Network Security Groups (NSGs)
+NSGs act as virtual firewalls and allow you to enforce network security rules at the subnet or individual resource level. You can define inbound and outbound rules to control access and traffic flow based on source/destination IP addresses, ports, and protocols.
+
+# Virtual Network Peering
+Virtual Network Peering enables the connection of multiple VNets within the same Azure region, allowing resources in different VNets to communicate with each other securely, as if they were in the same network.
+
+# Azure Load Balancer
+Azure Load Balancer distributes incoming network traffic across multiple resources (such as virtual machines) within a VNet, ensuring high availability, scalability, and fault tolerance.
+
+# Virtual Private Network (VPN) Gateway
+The VPN Gateway enables secure connectivity between your Azure virtual network and your on-premises network or other remote networks. It establishes an encrypted tunnel over the public internet, providing a secure connection for data transfer.
+
+# Azure ExpressRoute
+ExpressRoute allows you to establish a private and dedicated connection between your on-premises network and Azure. It bypasses the public internet, providing a more secure and reliable connection for accessing Azure services.
+
+# Azure Firewall
+Azure Firewall is a managed network security service that provides centralized security and threat protection for your Azure resources. It filters network traffic based on application and network-layer rules, protecting your resources from unauthorized access.
+
+# Azure Virtual WAN
+Azure Virtual WAN is a networking service that simplifies the deployment and management of wide area networks (WANs). It provides optimized and secure connectivity for branch offices, remote users, and Azure resources.
+
+# Traffic Manager
+Traffic Manager is a global load balancing solution that directs incoming network traffic across multiple Azure regions or endpoints. It helps improve application performance, availability, and resilience by distributing traffic based on routing rules and health probes.
+
+By leveraging these components and services in Azure Network Architecture, you can design and build secure, scalable, and interconnected networks to support your applications and workloads in the cloud.
