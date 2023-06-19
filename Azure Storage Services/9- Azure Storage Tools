@@ -8,7 +8,7 @@ The Azure Portal is a web-based management interface that allows you to manage a
 Azure Storage Explorer is a standalone desktop application that provides a graphical interface for managing Azure Storage resources. It allows you to browse and manage storage accounts, containers, blobs, tables, and queues. With Storage Explorer, you can easily upload and download files, create and delete containers, and perform other common storage operations.
 
 # Azure PowerShell
-Azure PowerShell is a command-line interface that allows you to manage Azure resources using PowerShell commands. It provides a comprehensive set of cmdlets specifically designed for managing Azure Storage. With Azure PowerShell, you can create storage accounts, manage access policies, upload and download blobs, and automate various storage-related tasks.
+Azure PowerShell is a command-line interface that allows you to manage Azure resources using PowerShell commands. It provides a comprehensive set of cmds, lets specifically designed for managing Azure Storage. With Azure PowerShell, you can create storage accounts, manage access policies, upload and download blobs, and automate various storage-related tasks.
 
 # Azure CLI
 Azure CLI (Command-Line Interface) is a cross-platform command-line tool that allows you to manage Azure resources using simple commands. It provides a set of commands for interacting with Azure Storage, such as creating storage accounts, managing containers and blobs, setting access control policies, and generating SAS (Shared Access Signature) tokens.
