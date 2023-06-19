@@ -61,13 +61,13 @@ These are some fundamental concepts related to Azure Table storage. Understandin
 
 # Table Storage access points
 
-# Azure Table Storage accounts use this format: http://<storage account>.table.core.windows.net/<table>
+# Azure Table Storage accounts use this format: http://<storageaccount>.table.core.windows.net/<table>
 
 # Azure Cosmos DB Table API accounts use this format: http://<storageaccount>.table.cosmosdb.azure.com/<table>
 
 # Table Storage queries
 Queries retrieve data from tables.
-• Because a table only has one index, query performance is usually related to the PartitionKey and RowKey properties.
+Because a table only has one index, query performance is usually related to the PartitionKey and RowKey properties.
 
 http://<account>.windows.core.net/registrations(PartitionKey=”2011 New York City Marathon__Full”,RowKey=”1234__John__M__55”)
 
