@@ -1,0 +1,49 @@
+
+# Introduction to Network Interfaces and IP Addresses
+
+A Network Interface (NIC) serves as the connection point between a Virtual Machine (VM) and the underlying software-defined network in Azure. Each Azure VM can have one or more NICs attached to it. Each NIC can be assigned one or more static or dynamic public and private IP addresses.
+
+## Virtual Network and Subnets
+When you attach a NIC to a VM, it must be associated with a Virtual Network (VNet) and a specific subnet within that VNet. While it is possible to change the subnet assignment later, you cannot change the associated VNet once a NIC is created.
+
+## IP Configurations
+IP addresses, both public and private, are assigned at the NIC level. A NIC can have multiple IP configurations, including primary and secondary configurations.
+
+## Network Security Groups (NSGs) and Routes
+You can apply zero or one NSG and one or more routes to a network interface. NSGs allow you to control inbound and outbound network traffic by defining security rules. Routes enable you to specify how network traffic is directed within the network.
+
+## IP Forwarding
+For a VM to act as a network appliance or forward traffic between different networks, IP forwarding must be enabled on the associated network interface.
+
+## DNS Servers
+By default, Azure DHCP (Dynamic Host Configuration Protocol) servers assign DNS (Domain Name System) servers to network interfaces. You can specify which DNS server a network interface uses for hostname resolution.
+
+# IP Addresses
+
+An IP address is a unique identifier assigned to each computer or device on a network that uses the Internet Protocol for communication.
+
+## Private IP Addresses
+Private IPv4 addresses are used for communication within a virtual network or connected networks. When assigning a private IP address to a NIC, you have two options:
+
+- Dynamic: Azure automatically assigns the next available IP address from the subnet's address space.
+- Static: You manually assign an available IP address from within the subnet's address space.
+
+## Public IP Addresses
+Assigning a public IP address to an Azure resource, such as a VM, enables:
+
+- Inbound communication from the internet to the resource.
+- Outbound connectivity to the internet using a predictable IP address.
+
+Public IP addresses can be dynamic or static:
+
+- Dynamic: The address is released when dissociated from the associated resource.
+- Static: A static IP address is assigned when creating the public IP resource and remains the same until explicitly changed.
+
+# Hostname Resolution
+
+## DNS Hostname Resolution
+You can specify a DNS domain name label for a public IP resource. This creates a mapping in Azure-managed DNS servers, allowing you to access the resource using a domain name like "domainnamelabel.location.cloudapp.azure.com" instead of the IP address.
+
+## Internal DNS Hostname Resolution (for VMs)
+Azure VMs are configured with Azure-managed DNS servers by default, unless you configure custom DNS servers. These DNS servers provide internal name resolution within the same VNet, allowing VMs to communicate with each other using their hostname.
+
