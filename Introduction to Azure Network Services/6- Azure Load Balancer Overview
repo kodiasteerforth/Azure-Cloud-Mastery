@@ -1,0 +1,44 @@
+# Azure Load Balancer Overview
+Using Azure Load Balancer, you can deploy and maintain highly available applications on the Azure cloud platform.
+
+# Load Balancing
+By default, the Load Balancer utilizes a 5-tuple hash, which consists of the source IP address, source port, destination IP address, destination port, and IP protocol number. This hash is used to distribute network traffic (flows) across available servers.
+
+# Port Forwarding
+With Load Balancer, you can establish an inbound Network Address Translation (NAT) rule to redirect traffic from a specific port of a designated frontend IP address to a specific port of a chosen backend instance within the virtual network.
+
+# Application Agnostic and Transparent
+Load Balancer operates independently of specific TCP or UDP protocols and does not interact directly with the application layer. This means that Load Balancer can support various TCP or UDP application scenarios without requiring modifications specific to those applications.
+
+# Automatic Reconfiguration
+Load Balancer seamlessly adjusts its configuration when you scale instances up or down. This ensures that the load balancing functionality remains effective and properly distributes traffic as the number of instances changes.
+
+# Health Probes
+To assess the health of instances in the backend pool, Load Balancer employs health probes that you define. These probes periodically check the availability and responsiveness of the instances, allowing Load Balancer to make informed routing decisions.
+
+# Outbound Connection
+Load Balancer enables the translation of outbound flows from private IP addresses within your virtual network to the frontend IP address of the Load Balancer. This allows private IP addresses to communicate with public IP addresses on the internet.
+
+# Standard Load Balancer
+The Standard Load Balancer offers additional SKU-specific capabilities and features beyond the basic functionality provided by the Load Balancer.
+
+# Azure Load Balancer Components
+
+## Front-end IP configuration
+A Load Balancer can have one or more front-end IP addresses, also known as virtual IPs (VIPs). These IP addresses serve as entry points for incoming traffic.
+
+## Back-end address pool
+The back-end address pool consists of IP addresses (DIPs) associated with the Network Interface Cards (NICs) of virtual machines. Load Balancer distributes incoming traffic across these IP addresses.
+
+## Load balancing rules
+Load balancing rules define how traffic is mapped from a specific front-end IP and port combination to a set of back-end IP addresses and port combinations. A single Load Balancer can have multiple load balancing rules, each specifying a unique combination of front-end and back-end IP and port associations.
+
+## Probes
+Probes allow you to monitor the health of VM instances. If a health probe fails, the corresponding VM instance is automatically taken out of rotation, ensuring that traffic is not routed to unhealthy instances.
+
+## Inbound & Outbound NAT rules
+Inbound NAT rules define the traffic flow coming through the front-end IP and direct it to the appropriate back-end IP. Outbound NAT rules, on the other hand, translate the private IP addresses of virtual machines to the public IP address of the Load Balancer when communicating with external destinations.
+
+# Pricing Tiers
+Pricing tiers refer to the different options available for Load Balancer plans, each with varying capabilities and associated costs. The specific pricing details can be found on the Azure pricing page.
+
