@@ -1,0 +1,29 @@
+
+# Introduction to Network Security Groups
+A Network Security Group (NSG) is a resource in Azure that contains security rules governing inbound and outbound network traffic for various Azure resources.
+
+# Security Rule Properties
+- Name: Each security rule within an NSG must have a unique name within that NSG.
+- Priority: Rules are processed in priority order, with lower numbers indicating higher priority. The rule with the highest priority that matches the traffic is applied.
+- Source or Destination: This specifies the source or destination IP address, CIDR block, service tag, or application security group for the traffic. Multiple individual IP addresses or ranges can be specified, referred to as augmented security rules.
+- Protocol: The protocol can be TCP, UDP, or Any, indicating the type of traffic allowed or denied by the rule.
+- Port range: This specifies an individual port or a range of ports for the traffic.
+- Action: The action can be Allow or Deny, determining whether the traffic is permitted or blocked.
+
+# Service Tags
+Service tags are groups of IP address prefixes that simplify the creation of security rules. They represent predefined categories of Azure services, and you can't create custom service tags or specify the exact IP addresses included in a tag. Microsoft manages the IP address prefixes associated with each service tag, automatically updating them as necessary.
+
+Here are some examples of service tags and their corresponding services:
+
+- Storage: Denotes the IP address space for the Azure Storage service. Using the "Storage" tag in a rule allows or denies traffic to storage.
+- Sql: Denotes the IP address prefixes of Azure SQL Database, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure SQL Data Warehouse services.
+- Azure CosmosDB: Denotes the IP address prefixes of the Azure Cosmos DB service.
+- Azure KeyVault: Denotes the IP address prefixes of the Azure Key Vault service. Using the "AzureKeyVault" tag in a rule allows or denies traffic to Azure Key Vault.
+- EventHub: Denotes the IP address prefixes of the Azure Event Hubs service. Using the "EventHub" tag in a rule allows or denies traffic to Event Hubs.
+
+# Default NSG Rules
+Network Security Groups come with default rules that allow or deny traffic by default. These rules can be customized to meet specific requirements.
+
+# Application Security Group
+Application Security Groups (ASGs) enable you to define network security policies based on the structure of your applications. ASGs allow you to group virtual machines and define security rules for those groups, simplifying network security management within an application context.
+
