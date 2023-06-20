@@ -1,0 +1,27 @@
+# Delivering High Availability Solutions on Azure
+
+To ensure high availability of your applications and data on Azure, you can leverage various services and features provided by the platform. Here are some key concepts and services related to high availability on Azure:
+
+## Availability Zones
+
+Availability Zones offer a high-availability solution that protects your applications and data from datacenter failures. Each Availability Zone is a physically separate location within an Azure region, equipped with independent power, cooling, and networking infrastructure. By deploying resources across multiple Availability Zones, you can achieve resiliency and fault tolerance for your applications.
+
+Azure services can be categorized into two types regarding Availability Zones:
+
+1. Zonal services: These services allow you to pin your resources to a specific Availability Zone. For example, you can deploy virtual machines (VMs), managed disks, or assign IP addresses to a specific zone. By pinning resources to a specific zone, you gain control over the physical location of your resources.
+
+2. Zone-redundant services: These services automatically replicate data and resources across multiple Availability Zones. For instance, zone-redundant storage or SQL Database automatically replicates your data across different zones within a region. This redundancy ensures that your data remains available even if an entire zone becomes unavailable.
+
+## Availability Sets
+
+An availability set is a logical grouping of VMs within an Azure datacenter, designed to provide redundancy and availability for your applications. By placing VMs in an availability set, Azure understands how your application is built and ensures that VMs are distributed across fault and update domains.
+
+- Fault domains: A fault domain represents a logical group of underlying hardware that shares a common power source and network switch. It is similar to a rack in an on-premises datacenter. By distributing VMs across fault domains, you mitigate the risk of a single point of failure at the hardware level.
+
+- Update domains: An update domain is a logical group of underlying hardware that can undergo maintenance or be rebooted at the same time. By spreading VMs across update domains, you minimize potential downtime during planned maintenance events.
+
+For VMs using Azure Managed Disks, they are aligned with managed disk fault domains when using a managed availability set. This alignment ensures that all the managed disks attached to a VM are within the same managed disk fault domain, further enhancing the availability of your VMs and associated disks.
+
+By leveraging availability sets, you can achieve application-level resiliency by distributing VMs across fault and update domains, allowing your application to stay available even during hardware or maintenance events.
+
+These are some of the key concepts and services related to delivering high availability solutions on Azure. By utilizing availability zones, availability sets, and other resilient services, you can ensure that your applications and data remain accessible and protected.
