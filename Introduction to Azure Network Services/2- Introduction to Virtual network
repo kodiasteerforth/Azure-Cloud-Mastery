@@ -1,0 +1,44 @@
+# Introduction to Virtual Network
+A Virtual Network (VNet) is a logical representation of your network in the cloud. It allows you to create a private network environment in the cloud where you can deploy and manage your resources.
+
+# Azure Virtual Network Capabilities
+
+# Isolation and Segmentation
+By deploying resources such as Virtual Machines (VMs) into Virtual Networks, those resources are isolated from other resources. You can further segment your network by using subnets, which are subdivisions of the Virtual Network.
+
+# Communication with the Internet
+All resources within a Virtual Network can communicate outbound to the internet by default. If you want to enable inbound communication, you can use a Public IP address or a load balancer.
+
+# Communication between Resources
+Resources within a Virtual Network can securely communicate with each other using the Virtual Network itself or Virtual Network service endpoints. This allows for secure and private communication between resources within the same Virtual Network.
+
+# Communicate with On-Premise Resources
+To establish communication between your Azure Virtual Network and on-premise resources, you have several options:
+Point-to-Site VPN (Virtual Private Network): Allows individual computers to connect securely to the Virtual Network over the internet.
+Site-to-Site VPN: Connects an on-premise network to the Virtual Network over an encrypted VPN tunnel.
+ExpressRoute: Provides a private, dedicated connection between your on-premise network and Azure, bypassing the public internet.
+
+# Filter Network Traffic
+To control and secure network traffic within your Virtual Network, you can use the following mechanisms:
+
+Network Security Groups (NSGs): These are firewall-like rules that filter traffic based on source and destination IP addresses, ports, and protocols.
+Application Security Groups: These groups allow you to define security policies for specific applications or application tiers.
+Azure Firewall: A managed firewall service that provides network-level protection for resources within your Virtual Network.
+NVA (Network Virtual Appliance): Third-party virtual appliances that can be deployed to filter and manage network traffic within your Virtual Network.
+
+# Route Network Traffic
+You can use Route Tables to configure user-defined routes within your Virtual Network. This allows you to control the flow of network traffic and direct it based on specific criteria. Additionally, you can propagate your on-premise routes to your Virtual Networks, ensuring seamless communication between your on-premise and cloud environments.
+
+# Monitor Network Traffic
+To monitor network traffic within your Virtual Network, you can utilize the following tools:
+
+NSG Logs: Network Security Group logs provide insights into the network traffic flowing through your Virtual Network, helping you identify and troubleshoot issues.
+Traffic Analytics: This monitoring solution allows you to analyze and visualize network traffic patterns, helping you gain visibility and optimize your network performance.
+
+# Connect Networks
+Azure allows you to peer your Virtual Networks regardless of their physical location. This means you can establish connectivity between Virtual Networks, enabling resource communication and data transfer between them.
+
+# Subnets
+A subnet is a range of IP addresses within a Virtual Network. It allows you to divide your Virtual Network into smaller segments for organizational or security purposes. VMs and Platform-as-a-Service (PaaS) services can be deployed to subnets within the same Virtual Network and can communicate with each other without requiring any additional configuration.
+
+Route tables, Network Security Groups (NSGs), Service Endpoints, and policies can all be configured at the subnet level to provide granular control and security for the resources within your Virtual Network.
