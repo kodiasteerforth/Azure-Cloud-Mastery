@@ -1,0 +1,22 @@
+# Virtual Machine Deployment Options, Configuration Choices and VM Sizes
+When deploying virtual machines (VMs) in Azure, you have various options and configuration choices. Here's more information on virtual machine deployment options, configuration choices, and VM sizes:
+
+# Virtual Machine Deployment Options
+Azure Virtual Machines provide Infrastructure as a Service (IaaS) capabilities, allowing you to create and use virtual machines in the cloud. You have the following options for deploying VMs:
+- Use pre-built images provided by Azure or partners.
+- Bring your own image to create a custom VM.
+- Deploy VMs using Azure portal, Azure PowerShell and ARM templates, Azure CLI, client SDKs, or REST APIs.
+
+# Virtual Machine Configuration Choices
+When creating a virtual machine in Azure, you have several configuration choices to customize its setup:
+- Operating system: Choose from a range of supported Windows and Linux operating systems for your VM.
+- VM size: Select the appropriate VM size that determines factors such as processing power, memory, number of disks you can attach, and network bandwidth.
+- Region: Specify the Azure region where the VM will be hosted, considering factors like proximity to users, compliance requirements, and data sovereignty.
+- VM extensions: Enhance the capabilities of your VM by adding extensions, such as antivirus software, monitoring agents, or custom scripts.
+- Compute, Networking, and Storage: During VM provisioning, Azure sets up the compute resources, networking components (like virtual network, subnet, and network security groups), and storage resources (such as OS disk and data disks) based on your configuration choices.
+
+# VM Sizes
+Azure offers a wide range of VM sizes to cater to different workload requirements. VM sizes vary in terms of CPU power, memory capacity, and storage capabilities. Each VM size is associated with a specific set of resources and performance characteristics. Some examples of VM size families in Azure include General Purpose, Memory Optimized, Compute Optimized, and GPU instances. The specific VM sizes available may vary across Azure regions.
+
+By selecting the appropriate VM size, you can ensure that your virtual machine meets the performance and resource requirements of your applications and workloads.
+
