@@ -1,0 +1,50 @@
+
+# VPN Gateway Overview
+A VPN gateway is a specific type of virtual network gateway used to establish encrypted connections between an Azure virtual network and an on-premises location over the public Internet.
+
+# Monitoring and Alerts
+You can monitor the key metrics of your VPN gateway and configure alerts to stay informed about its performance and status.
+
+# Connection Topologies
+VPN gateways support various connection topologies:
+- Site-to-Site: Connects an on-premises network to an Azure virtual network.
+- Multi-Site: Allows multiple on-premises networks to connect to a single Azure virtual network.
+- Point-to-Site: Establishes a secure connection from an individual client computer to an Azure virtual network.
+- VNet-to-VNet: Connects two Azure virtual networks together.
+- ExpressRoute: Establishes a private, dedicated connection between an on-premises network and Azure through a connectivity provider.
+
+# Local Network Gateway
+A local network gateway represents your on-premises location, typically a VPN device, and includes the address prefixes of your on-premises network.
+
+# Gateway Subnet
+Before creating a VPN gateway, you need to create a gateway subnet named 'GatewaySubnet'. This subnet is exclusively reserved for the VPN gateway and should not be used for any other deployments.
+
+# Gateway SKUs
+You can choose a VPN gateway SKU based on your specific requirements, considering factors such as workload types, throughput, features, and SLAs.
+
+# Zone-Redundant Gateways
+Zone-redundant gateways provide zone-resiliency to access mission-critical and scalable services in Azure, offering high availability and fault tolerance.
+
+# Connection Types
+The VPN connection types available are:
+- IPsec: Establishes a secure VPN connection using IPsec/IKE protocols.
+- VNet-to-VNet: Connects two Azure virtual networks using IPsec/IKE.
+- ExpressRoute: Establishes a dedicated and private connection between an on-premises network and Azure through an ExpressRoute circuit.
+- VPNClient: Allows individual client computers to securely connect to an Azure virtual network using point-to-site connections.
+
+# VPN Types
+The VPN type you choose depends on the desired connection topology and the VPN device being used. The options are:
+- Policy-based VPN: Uses specific policies to determine how traffic is encrypted and routed.
+- Route-based VPN: Uses routes to determine how traffic is encrypted and routed.
+
+# Point-to-Site VPN
+A Point-to-Site (P2S) VPN gateway connection enables secure connections from individual client computers to an Azure virtual network. This is useful for remote users who need to connect to Azure VNets from locations such as home or conferences.
+
+# Site-to-Site VPN
+A Site-to-Site (S2S) VPN gateway connection uses an IPsec/IKE (IKEv1 or IKEv2) VPN tunnel to establish a secure connection. S2S connections are suitable for cross-premises and hybrid configurations, requiring a VPN device with a public IP address assigned to it and not behind a NAT.
+
+# VNet-to-VNet VPN
+Connecting two virtual networks (VNet-to-VNet) is similar to connecting a VNet to an on-premises location. Both types of connectivity use a VPN gateway to establish a secure tunnel using IPsec/IKE.
+
+These VPN connectivity topologies enable you to securely connect your Azure virtual networks with on-premises networks or other virtual networks within Azure.
+
