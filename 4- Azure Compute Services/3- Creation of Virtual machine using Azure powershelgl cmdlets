@@ -1,0 +1,64 @@
+# Creation of Virtual Machine using Azure Powershelgl Cmdlets
+
+To create a virtual machine using Azure PowerShell cmdlets, you can follow the steps below:
+
+1. Install Azure PowerShell: If you haven't already, you'll need to install Azure PowerShell on your machine. You can download and install it from the PowerShell Gallery or the Azure Downloads page.
+
+2. Connect to your Azure account: Open PowerShell and sign in to your Azure account using the following command:
+" powershell" = Connect-AzAccount
+
+Follow the prompts to authenticate and select the appropriate subscription.
+
+3. Create a resource group: A resource group is a logical container for your Azure resources. You can create one using the following command:
+"powershell" =  New-AzResourceGroup -Name "YourResourceGroupName" -Location "YourAzureRegion"
+
+Replace "YourResourceGroupName" with a name for your resource group, and "YourAzureRegion" with the desired Azure region (e.g., "East US", "West Europe", etc.).
+
+4. Create a virtual network: A virtual network is required for the virtual machine to connect to other resources. You can create one using the following command:
+"powershell" = 
+$subnetConfig = New-AzVirtualNetworkSubnetConfig -Name "YourSubnetName" -AddressPrefix "10.0.0.0/24"
+New-AzVirtualNetwork -Name "YourVirtualNetworkName" -ResourceGroupName "YourResourceGroupName" -Location "YourAzureRegion" -AddressPrefix "10.0.0.0/16" -Subnet $subnetConfig
+
+Replace "YourSubnetName" with a name for your subnet, "YourVirtualNetworkName" with a name for your virtual network, "YourResourceGroupName" with the name of the resource group you created, and "YourAzureRegion" with the desired Azure region.
+
+5. Create a public IP address: The virtual machine will need a public IP address to be accessible from the internet. Use the following command to create one:
+"powershell+ =  New-AzPublicIpAddress -Name "YourPublicIPName" -ResourceGroupName "YourResourceGroupName" -Location "YourAzureRegion" -AllocationMethod Dynamic
+Replace "YourPublicIPName" with a name for your public IP address.
+
+6. Create a network security group: A network security group defines inbound and outbound traffic rules. You can create one using the following command:
+"powershell"
+New-AzNetworkSecurityGroup -Name "YourNSGName" -ResourceGroupName "YourResourceGroupName" -Location "YourAzureRegion"
+```
+Replace "YourNSGName" with a name for your network security group.
+
+7. Create a network security group rule: By default, Azure blocks all incoming traffic. You'll need to create an inbound rule to allow remote desktop access (RDP). Use the following command to create the rule:
+"powershell"
+$rule = New-AzNetworkSecurityRuleConfig -Name "AllowRDP" -Protocol Tcp -Direction Inbound -Priority 1000 -SourceAddressPrefix * -SourcePortRange * -DestinationAddressPrefix * -DestinationPortRange 3389 -Access Allow
+$networkSecurityGroup = Get-AzNetworkSecurityGroup -Name "YourNSGName" -ResourceGroupName "YourResourceGroupName"
+$networkSecurityGroup | Add-AzNetworkSecurityRuleConfig -NetworkSecurityRule $rule
+$networkSecurityGroup | Set-AzNetworkSecurityGroup
+
+Replace "YourNSGName" with the name of your network security group.
+
+8. Create a virtual network interface card (NIC): A virtual machine requires a NIC to connect to the network. Use the following command to create one:
+"powershell"
+$subnet = Get-AzVirtualNetworkSubnetConfig -VirtualNetwork (Get-AzVirtual
+
+Network -Name "YourVirtualNetworkName" -ResourceGroupName "YourResourceGroupName") -Name "YourSubnetName"
+New-AzNetworkInterface -Name "YourNICName" -ResourceGroupName "YourResourceGroupName" -Location "YourAzureRegion" -SubnetId $subnet.Id -PublicIpAddressId (Get-AzPublicIpAddress -Name "YourPublicIPName" -ResourceGroupName "YourResourceGroupName").Id -NetworkSecurityGroupId (Get-AzNetworkSecurityGroup -Name "YourNSGName" -ResourceGroupName "YourResourceGroupName").Id
+
+Replace "YourVirtualNetworkName" with the name of your virtual network, "YourSubnetName" with the name of your subnet, "YourNICName" with a name for your NIC, and make sure to use the correct resource group and public IP name.
+
+9. Create a virtual machine: Finally, you can create the virtual machine using the following command:
+"powershell"
+New-AzVMConfig -VMName "YourVMName" -VMSize "Standard_DS2_v2" | `
+    Set-AzVMOperatingSystem -Windows -ComputerName "YourComputerName" -Credential (Get-Credential) | `
+    Set-AzVMSourceImage -PublisherName "MicrosoftWindowsServer" -Offer "WindowsServer" -Skus "2019-Datacenter" -Version "latest" | `
+    Add-AzVMNetworkInterface -Id (Get-AzNetworkInterface -Name "YourNICName" -ResourceGroupName "YourResourceGroupName").Id | `
+    Set-AzVMBootDiagnostic -Enable -ResourceGroupName "YourResourceGroupName" -StorageAccountName "YourStorageAccountName" | `
+    New-AzVM -ResourceGroupName "YourResourceGroupName" -Location "YourAzureRegion" -DisableBginfoExtension
+
+Replace "YourVMName" with a name for your virtual machine, "YourComputerName" with the desired computer name for the VM, "YourNICName" with the name of your NIC, "YourResourceGroupName" with the name of your resource group, "YourAzureRegion" with the desired Azure region, and "YourStorageAccountName" with the name of your storage account for boot diagnostics.
+
+Once you run the above command, it will prompt you to enter the username and password for the virtual machine.
+
