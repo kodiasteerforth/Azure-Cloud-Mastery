@@ -1,1 +1,31 @@
 # Azure Compute Building Blocks
+Azure Compute offers various building blocks that enable you to create and manage virtual machines and other compute resources in the Azure cloud. Here are some key building blocks:
+
+# Virtual Machines (VMs)
+Azure VMs provide scalable and flexible computing resources. You can choose from a wide range of VM sizes and configure them with different operating systems, applications, and storage options.
+
+# Virtual Machine Scale Sets
+Scale sets allow you to deploy and manage a group of identical VMs. This building block enables you to scale applications horizontally and automatically distribute traffic across instances.
+
+# Azure Container Instances (ACI)
+ACI provides a lightweight and serverless environment for running containers without managing the underlying infrastructure. It allows you to quickly deploy and scale containerized applications.
+
+# Azure Kubernetes Service (AKS)
+AKS is a fully managed Kubernetes service that simplifies the deployment, management, and scaling of containerized applications. It provides the necessary infrastructure to run and orchestrate containers.
+
+# Azure Functions
+Functions is a serverless compute service that allows you to run code on-demand without provisioning or managing infrastructure. It supports event-driven scenarios and enables you to focus on writing the code logic.
+
+# Azure Batch
+Batch enables you to run large-scale parallel and high-performance computing applications efficiently. It provides job scheduling, automatic scaling, and management of compute resources to process large workloads.
+
+# Azure Logic Apps
+Logic Apps is a cloud-based service that allows you to create workflows and integrate different systems and services. It provides a visual designer to build and automate business processes.
+
+# Azure App Service
+App Service is a platform-as-a-service (PaaS) offering that enables you to build, deploy, and scale web, mobile, and API applications. It supports multiple programming languages and provides features like automatic scaling and continuous deployment.
+
+# Azure Functions
+Functions is a serverless compute service that allows you to run code on-demand without provisioning or managing infrastructure. It supports event-driven scenarios and enables you to focus on writing the code logic.
+
+These building blocks provide a wide range of options for deploying and managing your compute resources in Azure, catering to different application requirements and development scenarios.
