@@ -1,0 +1,25 @@
+# Peering
+Virtual network peering allows you to establish connections between two virtual networks, either within the same region (VNet peering) or across different regions (Global VNet peering).
+
+# Connectivity
+## Seamless connectivity
+- When virtual machines are located in peered virtual networks, the traffic between them is routed directly through Microsoft's backbone infrastructure. This means the traffic doesn't need to go through a gateway or traverse the public Internet.
+- Network security groups can be applied within either virtual network to control access and block traffic between virtual networks or subnets if necessary.
+
+# Service Chaining
+## Hub and Spoke
+- You can set up hub-and-spoke network architectures, where the hub virtual network acts as a central point and can host infrastructure components like network virtual appliances or VPN gateways.
+- Spoke virtual networks can be peered with the hub virtual network, enabling traffic to flow through the network virtual appliances or VPN gateways located in the hub virtual network.
+
+## Gateway and on-premise Connectivity
+### Gateway Transit
+- When virtual networks are peered, you have the option to configure the gateway in the peered virtual network as a transit point to connect with an on-premises network.
+- Gateway transit is supported for both VNet peering and Global VNet peering scenarios.
+
+# Peering Scenarios
+- Peering between virtual networks within the same subscription is allowed.
+- Peering between virtual networks in different subscriptions under the same Azure Active Directory (AD) tenant is permitted.
+- Peering between virtual networks in different subscriptions located in different AD tenants is also supported.
+
+These connectivity scenarios enable you to establish secure and efficient communication between virtual networks, whether they are located within the same region or across different regions or subscriptions.
+
