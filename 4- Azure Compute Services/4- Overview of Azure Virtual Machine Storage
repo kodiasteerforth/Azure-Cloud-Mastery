@@ -1,0 +1,37 @@
+# Virtual Machine Storage Overview
+
+When working with virtual machines (VMs) in Azure, there are different types of disks and storage options available. Here is an overview of the various disks, performance tiers, and disk encryption options:
+
+## Disks Used by VMs
+
+1. Operating system disk: Every virtual machine has an operating system disk. This disk contains the VM's operating system and boot files.
+
+2. Temporary disk: Each VM comes with a temporary disk. The temporary disk provides short-term storage for applications and processes. However, the data on the temporary disk is not persisted when the VM is deallocated or stopped.
+
+3. Data disk: A data disk is an additional virtual hard disk (VHD) attached to a virtual machine. It is used to store application data or other data that needs to be retained. Data disks can be added or removed as needed.
+
+## Performance Tiers
+
+1. Standard storage: Standard Storage uses hard disk drives (HDDs) and provides cost-effective storage with moderate performance. It is suitable for dev/test environments, non-critical workloads, and infrequently accessed data. The maximum throughput and IOPS per disk in Standard Storage are 60 MB/s and 500, respectively.
+
+2. Premium storage: Premium Storage utilizes solid-state drives (SSDs) and offers high-performance, low-latency disk support for VMs running I/O-intensive workloads. It is ideal for production environments and performance-sensitive workloads. The maximum throughput and IOPS per disk in Premium Storage are 250 MB/s and 7500, respectively.
+
+## Type of Disks
+
+1. Unmanaged disks: Unmanaged disks are the traditional type of disks used by VMs. With unmanaged disks, you manually create and manage storage accounts (SAs) and specify the SA when creating the disk. It's important to ensure that the scalability targets of the storage account (20,000 IOPS) are not exceeded.
+
+2. Managed disks: Managed Disks simplify disk management by handling the creation and management of storage accounts for you. You don't need to worry about the scalability limits of the storage account. Microsoft recommends using Azure Managed Disks for new VMs.
+
+## Snapshots & Images
+
+1. Snapshots: A snapshot is a read-only full copy of a disk at a specific point in time. Snapshots can be used for backup, recovery, or creating new disks based on an existing disk's state. They are often used for data protection and disaster recovery scenarios.
+
+2. Images: An image is a reusable template that captures the state of a VM. It can be created from a custom VHD in a storage account or directly from a generalized (sys-prepped) VM. An image includes all the disks attached to the VM, allowing you to create new VMs with the same configuration.
+
+## Disk Encryption
+
+1. Storage Service Encryption: Azure Storage Service Encryption provides encryption-at-rest for managed disks, snapshots, and images. It ensures that data is encrypted to meet organizational security and compliance requirements. Storage Service Encryption is enabled by default for all managed disks in regions where managed disks are available.
+
+2. Azure Disk Encryption: Azure Disk Encryption allows you to encrypt the operating system and data disks used by an IaaS VM. For Windows VMs, BitLocker encryption technology is used, while for Linux VMs, DM-Crypt technology is employed. Disk encryption helps protect data even if the disks are lost or stolen.
+
+These are the key aspects of virtual machine storage in Azure, including the types of disks, performance tiers, snapshots, images, and disk encryption options available.
