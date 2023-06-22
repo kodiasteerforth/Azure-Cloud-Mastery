@@ -1,0 +1,31 @@
+# Azure Compute Services - Virtual Machine Scale Sets & Auto Scaling
+Azure provides compute services such as Virtual Machine Scale Sets and Auto Scaling to help you efficiently manage and scale your virtual machine resources. Let's explore these services:
+
+## Virtual Machine Scale Sets
+Virtual Machine Scale Sets (VMSS) are an Azure compute resource that allows you to deploy and manage a group of identical virtual machines. VMSS is designed to support auto scaling of virtual machines based on demand. Key points about VMSS include:
+
+- Creation: VM Scale Sets can be created using the Azure portal, JSON templates, or REST APIs.
+- Scaling: To increase or decrease the number of VMs in a scale set, you can modify the capacity property and redeploy the template.
+- Networking: VMs within a scale set are created inside a virtual network (VNET) and are not allocated public IP addresses individually.
+
+## Auto Scaling
+Auto Scaling enables you to dynamically allocate or remove resources based on the load on your services. You can define rules and policies to automatically adjust the number of instances within a range. Key points about Auto Scaling include:
+
+- Horizontal Scaling: Auto Scaling primarily focuses on horizontal scaling, also known as scale-out or scale-in scaling. It adjusts the number of VM instances in response to changing demand.
+- Vertical Scaling: While Auto Scaling primarily supports horizontal scaling, vertical scaling, which involves adjusting the power and capacity of individual VMs, is also possible. However, vertical scaling typically requires VM start and stop operations and is limited by the availability of larger hardware within the same region.
+- Implementation: Auto Scaling can be implemented for VMs, web apps, and cloud services, allowing you to scale various Azure compute resources.
+
+## Common Metrics for Auto Scaling
+When implementing Auto Scaling, you can define rules based on various metrics to trigger scaling actions. Some commonly used metrics include:
+
+- Compute Metrics: These metrics vary depending on the operating system installed. For Windows, you can utilize processor, memory, physical and logical disk metrics. For Linux, processor, memory, physical, and network interface metrics are available.
+- Web Apps Metrics: Web Apps metrics include CPU and memory percentages, disk and HTTP queue length, as well as bytes received/sent.
+- Storage/Service Bus Metrics: For scaling based on storage or service bus, you can utilize metrics such as storage queue length, which represents the number of messages in the storage queue.
+
+## Tools to Implement Auto Scaling
+Azure provides several tools to implement Auto Scaling:
+
+- Azure Portal: You can use the Azure portal to create VM Scale Sets and enable Auto Scaling based on specific metrics.
+- Azure Resource Manager (ARM) Templates: You can provision and deploy VM Scale Sets using ARM templates. These templates can be deployed using Azure CLI, PowerShell, REST APIs, or directly from Visual Studio.
+
+By leveraging Virtual Machine Scale Sets and Auto Scaling, you can efficiently manage and scale your virtual machine resources in Azure, ensuring optimal performance and resource utilization based on demand.
