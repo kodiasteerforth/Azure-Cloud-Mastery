@@ -1,0 +1,51 @@
+# Azure App Service Backup & Scaling
+
+## App Service Backup
+
+The Backup and Restore feature in Azure App Service allows you to easily create backups of your apps. The following information is backed up:
+
+- App Configuration: This includes the settings and configurations of your app, such as environment variables, connection strings, and application settings.
+
+- File Content: The files and content stored within your app, such as static files, images, scripts, and other assets, are backed up.
+
+- Database Connected to Your App: If your app is connected to a database, such as Azure SQL Database or MySQL Database, the database is also included in the backup process.
+
+## Backup Features
+
+Azure App Service provides several backup features:
+
+- Manual Backup: You can manually initiate a backup of your app at any time, allowing you to create backups on-demand.
+
+- Automated Backup: You can set up automated backups based on a schedule. This ensures that regular backups are created automatically without manual intervention.
+
+- Partial Backups: You have the flexibility to perform partial backups, where you can choose to back up only specific parts of your app or database, if needed.
+
+- Backup Storage: The backups are stored in a storage account in Azure. You can specify the storage account where the backups will be stored.
+
+## Backup Restoration
+
+The restoration process allows you to either restore your app and its linked database to a previous state or create a new app using the backups. The restoration feature is available for apps running in the Standard and Premium tiers.
+
+Restoring from backups allows you to recover your app and database to a specific point in time, helping you to revert any unintended changes or recover from critical issues.
+
+## App Service Scaling
+
+Azure App Service provides two main ways to scale your app:
+
+1. Scale Up: Scaling up involves increasing the computing resources allocated to your app. This includes getting more CPU, memory, disk space, and additional features like dedicated virtual machines (VMs), custom domains and certificates, staging slots, autoscaling, and more. You can scale up by changing the pricing tier of the App Service plan that your app belongs to.
+
+2. Scale Out: Scaling out involves increasing the number of VM instances that run your app. By scaling out, you distribute the workload across multiple instances, allowing for improved performance and higher availability. The number of instances you can scale out to depends on your pricing tier. In the Isolated tier, known as App Service Environments, you can further increase the scale-out count to up to 100 instances.
+
+## Autoscaling
+
+Azure App Service offers several ways to implement autoscaling:
+
+- Scaling Manually: You can manually adjust the number of instances your app is running based on demand. This allows you to scale up or scale out as needed, depending on the workload.
+
+- Scaling Based on Pre-set Metric: You can set up autoscaling rules based on predefined metrics, such as CPU usage, memory utilization, or HTTP queue length. When these metrics reach a certain threshold, the number of instances will automatically increase or decrease.
+
+- Scaling Based on Other Metrics: Azure App Service also supports scaling based on custom metrics, allowing you to define specific conditions for autoscaling based on the metrics that matter to your application.
+
+- Scaling Based on Schedule: You can configure autoscaling based on a predefined schedule. For example, you might want to scale up during peak business hours and scale down during low-traffic periods.
+
+By leveraging autoscaling, you can ensure that your app dynamically adjusts its resources to meet the demand, optimizing performance and cost efficiency.
