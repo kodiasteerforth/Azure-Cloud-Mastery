@@ -1,0 +1,41 @@
+# Introduction to Azure Mobile Apps
+
+Azure Mobile Apps is a cloud-based service provided by Azure that enables the development and deployment of mobile applications with backend functionality. It provides a set of features and tools to simplify the process of building, deploying, and scaling mobile apps for different platforms.
+
+## Azure Mobile Apps Overview
+
+Azure Mobile Apps allows developers to create the backend for mobile applications, including data storage, authentication, and push notifications, without needing to manage the infrastructure. It provides a scalable and reliable platform for building mobile apps that can seamlessly connect with cloud services.
+
+## Mobile Apps Backend Development
+
+To develop the backend for Azure Mobile Apps, the following steps are involved:
+
+1. Create an Azure mobile app backend in the Azure portal, which sets up the necessary resources and services for hosting the backend.
+2. Configure the mobile app backend, including settings such as authentication providers, data storage options, and push notification services.
+3. Define a table controller, which acts as a RESTful API endpoint for performing CRUD (Create, Read, Update, Delete) operations on a specific data table.
+4. Create a Data Transfer Object (DTO) class, which defines the structure of the data to be exchanged between the client and the backend.
+5. Configure a table reference in the Mobile DbContext class, which provides access to the underlying data storage for the specified table.
+6. Create a table controller, which implements the necessary methods for handling HTTP requests related to the data table.
+7. Define a custom API controller, which allows for the creation of custom endpoints to perform specific operations beyond basic CRUD functionality.
+
+## Mobile Client-Side Development
+
+For mobile client-side development with Azure Mobile Apps, the following steps are involved:
+
+1. Depending on the mobile operating system (iOS, Android, Xamarin, Windows), download the respective client-side SDK (Software Development Kit) provided by Azure.
+2. Reference the MicrosoftAzureMobile library in your client code, which provides the necessary client-side functionality for interacting with the Azure Mobile Apps backend.
+3. Create an MSClient reference (for iOS) and start accessing data from tables by making API requests to the designated endpoints.
+4. For custom APIs, use the MSClient.invokeAPI method to call the custom endpoints defined in the backend.
+
+## Mobile Offline Data Sync
+
+Azure Mobile Apps offers offline data sync as a client and server SDK feature, allowing mobile apps to function without a network connection. The offline data sync feature enables the following:
+
+1. Sync table: Instead of directly accessing the "/tables" endpoint, Azure Mobile client SDKs provide interfaces such as MSTable. However, this approach requires a network connection.
+2. To support offline use, apps should use the sync table APIs such as MSSyncTable. All CRUD operations are performed on a local store.
+3. The local store is the data persistence layer on the client device. It utilizes SQLite on Windows, Xamarin, and Android, and Core Data on iOS.
+4. Offline synchronization can involve different strategies, including pull (retrieve data from the server), push (send local changes to the server), implicit pushes (automatically push changes when the network connection is available), and incremental sync (sync only the changes made since the last sync).
+
+By utilizing the offline data sync feature, mobile apps can provide a seamless user experience, even when the device is offline or has limited network connectivity.
+
+Note: It is important to consider security measures and design patterns specific to mobile app development to ensure data privacy and secure communication between the mobile app and the Azure Mobile Apps backend.
