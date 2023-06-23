@@ -1,0 +1,30 @@
+# Azure Service Fabric Overview
+Azure Service Fabric is a distributed systems platform provided by Microsoft that simplifies the packaging, deployment, and management of scalable and reliable microservices. It enables the development and operation of complex applications composed of small, independently versioned, and scalable services that communicate with each other over standard protocols with well-defined interfaces. Here's an overview of Azure Service Fabric:
+
+## Microservice Architecture
+Microservice applications built on Service Fabric consist of small, self-contained services that manage and store their own data. These services can be developed using any programming language and can be independently scaled and upgraded. Each service has a unique name that is used to resolve its location within the cluster.
+
+One of the benefits of microservices is the ability to scale and evolve individual services independently, allowing for better flexibility and agility in application development.
+
+## Service Fabric Infrastructure Components
+Service Fabric has two main infrastructure components:
+
+1. Cluster: A cluster is a network-connected set of virtual or physical machines in which microservices are deployed and managed. The cluster can scale from a few machines to thousands of machines, providing high availability and fault tolerance.
+
+2. Node: A node refers to a machine or virtual machine that is part of the Service Fabric cluster. Each node runs the FabricHost.exe Windows service, which automatically starts upon boot and launches two executables: Fabric.exe and FabricGateway.exe. These executables handle the runtime and communication aspects of the Service Fabric platform.
+
+## Service Fabric Application Components
+Service Fabric applications consist of the following components:
+
+1. Application Type, Application Package, and Named Application: An application type represents a collection of service types and is defined in the ApplicationManifest.xml file. An application package is a disk directory that contains this file and other related artifacts. A named application is an instance of an application type with a specific name and version.
+
+2. Service Type, Service Package, and Named Service: A service type represents the code, data, and configuration packages for a specific service within an application. The service package is the container for these packages, and a named service refers to an instance of a service type with a specific name and version.
+
+## Service Fabric System Services
+Service Fabric provides several system services that are essential for its operation:
+
+1. Naming Service: Each Service Fabric cluster includes a Naming service, which acts as a name resolution service for the services within the cluster. It resolves service names to their respective locations, similar to how a Domain Name Service (DNS) works.
+
+2. Image Store Service: Service Fabric clusters also have an Image Store service where deployed and versioned application packages are stored. This service manages the storage and retrieval of application packages during deployment and upgrade operations.
+
+By leveraging Azure Service Fabric, developers can build and manage complex applications using the microservices architecture. It provides the necessary infrastructure and components to create scalable, reliable, and manageable applications in a distributed environment.
