@@ -1,0 +1,37 @@
+# Introduction to Azure App service building blocks
+Azure App Service is a fully managed platform-as-a-service (PaaS) offering provided by Microsoft Azure that enables developers to build, deploy, and scale web, mobile, and API applications without having to manage the underlying infrastructure. It offers a range of building blocks and features that facilitate the development and deployment of applications. Here's an introduction to the key building blocks of Azure App Service:
+
+1. Web App:
+   - Web Apps provide a managed environment for hosting web applications. Developers can deploy web applications developed in various languages such as .NET, Java, Node.js, Python, or PHP.
+   - Web Apps offer scalability, automatic OS updates, built-in load balancing, and high availability.
+   - You can easily deploy your web app from source control repositories like GitHub, Azure DevOps, or Bitbucket.
+
+2. Mobile App:
+   - Mobile Apps in Azure App Service allow developers to build and deploy mobile backends for iOS, Android, and Windows applications.
+   - Mobile Apps provide features like offline sync, push notifications, authentication, and data connectors to simplify mobile app development.
+
+3. API App:
+   - API Apps enable developers to quickly build and publish APIs that can be consumed by other applications.
+   - API Apps support various authentication mechanisms, versioning, and documentation generation to streamline API development and management.
+
+4. Logic App:
+   - Logic Apps provide a visual designer to create and orchestrate workflows by connecting different services and triggers.
+   - Logic Apps offer a large set of pre-built connectors that allow integration with various services and systems without writing custom code.
+
+5. Function App:
+   - Function Apps allow developers to create and run serverless code snippets or functions in various languages like C#, JavaScript, Python, and more.
+   - Function Apps are event-driven and can be triggered by various events, such as HTTP requests, timers, message queues, or external systems.
+
+6. Deployment Slots:
+   - Deployment Slots enable developers to deploy and test their application changes in separate environments before swapping them into production.
+   - Slots provide isolation, allowing you to perform testing, staging, and gradual rollout of updates without impacting the production environment.
+
+7. App Service Plans:
+   - App Service Plans define the compute resources, scaling options, and pricing tiers for running your apps.
+   - You can choose from different pricing tiers based on the desired performance, scalability, and features required for your applications.
+
+8. Azure Functions:
+   - Azure Functions, although not exclusive to Azure App Service, can be used as building blocks within App Service.
+   - Functions allow developers to write serverless code snippets that respond to various events and triggers, providing scalable and event-driven execution.
+
+These building blocks of Azure App Service provide a comprehensive set of tools and services for building, deploying, and scaling web, mobile, and API applications. Developers can leverage these components to focus on application logic and functionality while Azure takes care of the underlying infrastructure management and scalability.
