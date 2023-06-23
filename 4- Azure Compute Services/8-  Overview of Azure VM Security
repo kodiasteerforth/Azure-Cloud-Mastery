@@ -1,0 +1,32 @@
+# Overview of Azure VM Security
+
+Azure provides several security features and services to enhance the security of virtual machines (VMs) deployed in the Azure cloud. Here's an overview of key components and features:
+
+## Azure Active Directory
+- Each Azure subscription is associated with an Azure Active Directory (AD) directory.
+- Users, groups, and applications from the directory can manage resources in the Azure subscription.
+- Access to resources is granted by assigning the appropriate RBAC (Role-Based Access Control) role to users, groups, or applications at a specific scope, such as a subscription, resource group, or individual resource.
+- Azure RBAC includes three basic roles:
+  - Owner: Has full access to all resources and can delegate access to others.
+  - Contributor: Can create and manage Azure resources but cannot grant access to others.
+  - Reader: Can view existing Azure resources.
+
+## Azure Security Center
+Azure Security Center provides comprehensive security management and threat protection for Azure resources, including virtual machines. It offers the following features:
+- VM Configuration Assessment: Identifies potential configuration issues in VMs, such as missing network security groups or unencrypted disks.
+- Threat Detection: Monitors VMs for suspicious activities and targeted attacks, such as brute-force Remote Desktop Protocol (RDP) attacks.
+- Security Policies: Allows you to define security policies and continuously monitor and evaluate compliance.
+- Remediation: Provides guidance and recommendations to remediate identified security issues.
+- Integration with Azure Defender: Enhances threat protection capabilities with advanced features like vulnerability assessment and adaptive application controls.
+
+## Managed Service Identity
+Managed Service Identity (MSI) is a feature that simplifies and enhances the security of accessing Azure services. It provides an automatically managed identity for resources like virtual machines, allowing them to authenticate and access Azure resources without requiring explicit credentials.
+
+## Other Security Features
+- Network Security Group (NSG): NSGs are Azure's built-in firewall capability, allowing you to control inbound and outbound traffic to VMs by defining rules based on source/destination IP, port, and protocol.
+- Microsoft Antimalware for Azure: Provides real-time protection against viruses, malware, and other threats on Windows and Linux VMs.
+- Encryption: Azure offers encryption at rest for VMs using Azure Disk Encryption, ensuring that data on disks is protected.
+- Key Vault and SSH Keys: Azure Key Vault securely stores and manages cryptographic keys, secrets, and certificates. SSH keys can be stored and retrieved from Key Vault to enhance secure access to Linux VMs.
+- Policies: Azure Policy allows you to enforce compliance with specific rules and regulations across your Azure environment, helping ensure consistent security configurations.
+
+These security features and services help safeguard Azure VMs by providing identity and access management, threat detection and prevention, configuration assessment, encryption, and policy enforcement. By leveraging these capabilities, you can enhance the security posture of your Azure VMs and protect your workloads from potential threats.
