@@ -1,0 +1,49 @@
+# Azure Content Delivery Network
+
+Azure Content Delivery Network (CDN) is a service that caches web content at strategically distributed edge locations to ensure fast and efficient delivery of content to end-users. The CDN reduces latency and improves performance by delivering content from the edge server that is geographically closest to the user.
+
+## CDN Products
+
+Azure offers several CDN products to cater to different needs:
+
+- Azure CDN Standard from Microsoft (Preview)
+- Azure CDN Standard from Akamai
+- Azure CDN Standard from Verizon
+- Azure CDN Premium from Verizon
+
+These products provide various features and integration options to optimize content delivery.
+
+## CDN Features
+
+Azure CDN offers a range of features to enhance content delivery:
+
+- Dynamic Site Acceleration: Optimizes the delivery of dynamic content, reducing latency and improving response times.
+- HTTPS Support: Enables secure content delivery over HTTPS protocol.
+- Query String Caching: Allows caching of content with different query strings, improving cache hit ratio.
+- Geo-Filtering: Provides the ability to restrict content access based on geographic locations.
+- Azure Diagnostics Logs: Enables logging and monitoring of CDN activities for analysis and troubleshooting purposes.
+
+These features contribute to improving the performance, security, and control of content delivery.
+
+## CDN Profile & CDN Endpoints
+
+In Azure CDN, a CDN profile is a container for one or more CDN endpoints. A CDN profile helps manage and configure settings for multiple endpoints. Each profile can have up to ten CDN endpoints by default. The process to set up a CDN involves two steps:
+
+1. Create a CDN Profile: Choose one of the Azure CDN products and create a CDN profile, which acts as a logical container for your endpoints.
+2. Create a CDN Endpoint: Specify the details for the CDN endpoint, such as its name, origin type (Azure storage, Cloud service, Web app, or custom origin), origin path, and origin protocol. The endpoint will be assigned a URL like `<Name>.azureedge.net`.
+
+CDN endpoints represent the actual entry points through which content is delivered to users.
+
+## Controlling How Files Are Cached
+
+Azure CDN provides various mechanisms to control how files are cached:
+
+- Caching Rules: You can define caching rules at the CDN endpoint level to specify how different types of content should be cached.
+- Global Caching Rules: These rules apply to all CDN endpoints within a CDN profile, allowing you to set consistent caching behavior across multiple endpoints.
+- Custom Caching Rules: Fine-grained control is possible by defining custom caching rules at the CDN endpoint level to override global caching rules.
+- Purge Cached Assets: You can manually purge or invalidate specific assets from the CDN cache, ensuring that users receive the most up-to-date content.
+- Pre-load Assets: Azure CDN allows you to pre-load or warm up the cache by requesting specific assets in advance, ensuring faster delivery when actual user requests are made.
+
+These mechanisms give you flexibility and control over how content is cached and delivered through the CDN.
+
+By utilizing Azure CDN, you can significantly enhance the performance and scalability of content delivery to your users, resulting in an improved user experience and reduced load on your origin servers.
