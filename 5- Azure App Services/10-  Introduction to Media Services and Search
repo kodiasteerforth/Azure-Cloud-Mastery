@@ -1,0 +1,39 @@
+# Introduction to Media Services and Search
+
+Azure Media Services and Azure Search are two services offered by Microsoft Azure that provide capabilities for managing and delivering media content and implementing powerful search functionality.
+
+## Media Services Overview
+
+Azure Media Services is a cloud-based platform that allows developers to build scalable media management and delivery applications. It provides REST APIs for securely uploading, storing, encoding, and packaging video or audio content for on-demand and live streaming delivery to various client devices such as TVs, PCs, and mobile devices.
+
+Key Concepts in Media Services:
+
+- Assets: Assets contain digital files (e.g., audio, video, images) and associated metadata.
+- Asset Files: Asset Files store metadata about the media files.
+- Access Policy: Access Policies define permissions and access duration for assets.
+- Locators: Locators provide access points to the files within an asset.
+- Jobs: Jobs are used to process audio/video presentations.
+- Channels: Channels process live streaming content and provide an ingest URL for live transcoding.
+- Programs: Programs control the publishing and storage of segments in a live stream.
+- Streaming Endpoint: A streaming endpoint represents a streaming service that delivers content.
+
+Media Services Scenarios:
+
+- Delivering On-Demand Content: Azure Media Services enables you to upload, encode, package, and deliver on-demand media content to various devices.
+- Delivering Live Stream Events: It allows you to process and deliver live streaming content, providing an ingest endpoint for live transcoding and controlling the publishing and storage of live segments.
+
+## Azure Search
+
+Azure Search is a cloud-based Search as a Service that allows you to add a robust search experience to your applications. It provides a simple REST API or .NET SDK for implementing search functionality without the need to manage search infrastructure.
+
+Key Features of Azure Search:
+
+- Powerful Queries: Azure Search supports advanced search queries, including full-text search, filtering, sorting, and faceted navigation.
+- Language Support: It offers support for multiple languages and includes built-in language analyzers for enhanced search accuracy.
+- Search Suggestions: Azure Search provides search suggestion capabilities to offer real-time query suggestions as users type.
+- Hit Highlighting: It highlights matching search terms in search results, making it easier for users to find relevant content.
+- Faceted Navigation: Faceted navigation allows users to refine search results by applying filters based on different attributes or categories.
+
+Azure Search is a versatile service that can be integrated into various applications to provide efficient and accurate search capabilities, improving user experiences and content discovery.
+
+By leveraging Azure Media Services and Azure Search, developers can build robust media management and delivery applications with advanced search functionalities, enabling them to deliver rich media content and provide seamless search experiences for their users.
