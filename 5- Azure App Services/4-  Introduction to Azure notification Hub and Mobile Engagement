@@ -1,0 +1,30 @@
+# Introduction to Azure Notification Hub & Mobile Engagement
+
+## Azure Notification Hub Overview
+
+Azure Notification Hub is a service provided by Azure that simplifies the process of sending push notifications to mobile devices. It offers a scalable and multiplatform push infrastructure, allowing backend systems to send push notifications to various mobile platforms (iOS, Android, Windows, etc.) from the cloud or on-premises.
+
+Key features and capabilities of Azure Notification Hub include:
+
+- Multiplatform support: It enables sending push notifications to different mobile platforms, eliminating the need for separate implementation for each platform.
+- Backend flexibility: You can integrate Notification Hub with any backend system, whether it's in the cloud or on-premises, to trigger push notifications.
+- Scalability: Notification Hub can handle millions of users and devices without requiring changes to the implementation.
+- Delivery patterns: It offers a range of delivery patterns, including broadcast (sending notifications to all devices), unicast/multicast (sending to specific devices or groups), and segmentation (sending to specific user segments based on criteria).
+
+The architecture of Notification Hubs involves mobile clients, which retrieve the Push Notification Service (PNS) handle for their respective platforms. The clients then register the PNS handle and templates using the Mobile Apps Client SDK register API. Finally, notifications are sent from the app backend to Notification Hubs, which handles the distribution of platform-independent messages to the targeted users or interest groups.
+
+## Azure Mobile Engagement
+
+Azure Mobile Engagement is a Software as a Service (SaaS) user-engagement platform provided by Azure. It offers a set of features and capabilities that enable data-driven insights into app usage, real-time user segmentation, and contextually-aware push notifications and in-app messaging.
+
+Key features of Azure Mobile Engagement include:
+
+1. Contextually-aware push notifications and in-app messaging: With Mobile Engagement, you can send push notifications and in-app messages to mobile app users based on their behavior, location, or other contextual factors. This allows for personalized and relevant interactions with users.
+   
+2. Data-driven insights into app usage: The platform provides analytics and reporting features that give you insights into how users are engaging with your mobile app. You can track metrics such as user sessions, screen views, custom events, and more, to understand user behavior and optimize your app accordingly.
+
+3. Real-time user segmentation: Mobile Engagement allows you to segment your app users in real-time based on various criteria, such as demographics, behaviors, or custom properties. This enables targeted messaging and personalized experiences for specific user groups.
+
+By leveraging Azure Mobile Engagement, you can enhance user engagement, deliver personalized messaging, gain actionable insights, and optimize the performance of your mobile app.
+
+Note: It is important to integrate the Mobile Engagement SDK into your mobile app to utilize its features and capabilities effectively.
