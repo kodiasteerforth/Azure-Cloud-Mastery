@@ -1,0 +1,45 @@
+# Azure API Apps & API Management
+
+## API Apps Overview
+
+API Apps is a feature of Azure that simplifies the development, hosting, and consumption of APIs in the cloud and on-premises. It provides enterprise-grade security, access control, automatic SDK generation, and seamless integration with Logic Apps. Key features of API Apps include:
+
+1. Bring Your Own API: You can bring your existing API developed in any supported language framework, such as C#, Java, PHP, Node.js, and host it as an API App without making any changes to the code.
+
+2. Easy Consumption: API Apps have integrated support for Swagger API, making it easy for developers to discover, understand, and consume APIs.
+
+3. Simple Access Control: API Apps offer built-in access control mechanisms to protect APIs from unauthenticated access without requiring modifications to your code.
+
+4. Visual Studio Integration: API Apps can be developed, managed, and deployed directly from Visual Studio, providing a seamless development experience.
+
+5. Integration with Logic Apps: API Apps seamlessly integrate with Azure Logic Apps, enabling the creation of powerful workflows and business processes by connecting APIs and services.
+
+## API Management Overview
+
+API Management is a comprehensive solution for managing APIs. It acts as a front-end layer for APIs, providing features like monitoring, usage throttling, request/response manipulation, consolidation of multiple APIs into one endpoint, and more. API Management can be used to manage APIs hosted anywhere, including Azure API Apps. Key points to understand about API Management are:
+
+- API Management is focused on managing APIs, while API Apps are about hosting APIs.
+
+- API Management provides a range of features to manage the lifecycle of APIs, including security, versioning, documentation, analytics, developer portal, and monetization.
+
+## API Management Portals
+
+API Management offers two main portals:
+
+1. Developer Portal: This portal is designed for developers who want to learn about APIs, explore available operations, and subscribe to API products. Developers can access the developer portal to understand how to use the APIs, view API documentation, and try out API calls.
+
+2. Publisher Portal: The publisher portal is used to manage the content and configuration of the developer portal. It allows administrators to customize the appearance and content of the developer portal, including adding custom content, styles, and branding.
+
+## API Management Concepts
+
+API Management introduces several key concepts:
+
+- APIs and Operations: Each API represents a set of operations that developers can call. Operations define specific actions that can be performed on the API, such as GET, POST, or DELETE.
+
+- Products: APIs in API Management are surfaced to developers through products. A product can include one or more APIs and is configured with a title, description, and terms of use. Products allow administrators to control access and visibility of APIs.
+
+- Groups: Groups are used to manage the visibility and access control of APIs. Administrator group members can manage API Management service instances and configure APIs, operations, and products. Developers group members are authenticated customers who build applications using the APIs. Guests are unauthenticated users who visit the developer portal.
+
+- Policies: Policies are a powerful capability of API Management that allows publishers to modify the behavior of APIs through configuration. Policies can be used to enforce security, transform requests and responses, implement caching, apply rate limiting, and more.
+
+API Management provides a comprehensive set of features and tools to manage APIs effectively and provide a developer-friendly experience for consuming APIs.
