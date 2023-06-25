@@ -1,5 +1,6 @@
 # Azure Service Fabric Overview
-Azure Service Fabric is a distributed systems platform provided by Microsoft that simplifies the packaging, deployment, and management of scalable and reliable microservices. It enables the development and operation of complex applications composed of small, independently versioned, and scalable services that communicate with each other over standard protocols with well-defined interfaces. Here's an overview of Azure Service Fabric:
+Azure Service Fabric is a distributed systems platform provided by Microsoft that simplifies the packaging, deployment, and management of scalable and reliable microservices. It enables the development and operation of complex applications composed of small, independently versioned, and scalable services that communicate with each other over standard protocols with well-defined interfaces. 
+Here's an overview of Azure Service Fabric:
 
 ## Microservice Architecture
 Microservice applications built on Service Fabric consist of small, self-contained services that manage and store their own data. These services can be developed using any programming language and can be independently scaled and upgraded. Each service has a unique name that is used to resolve its location within the cluster.
