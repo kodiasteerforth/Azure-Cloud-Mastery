@@ -8,7 +8,7 @@ Azure Media Services is a cloud-based platform that allows developers to build s
 
 Key Concepts in Media Services:
 
-- Assets: Assets contain digital files (e.g., audio, video, images) and associated metadata.
+- Assets: Assets contain digital files (example:  audio, video, images) and associated metadata.
 - Asset Files: Asset Files store metadata about the media files.
 - Access Policy: Access Policies define permissions and access duration for assets.
 - Locators: Locators provide access points to the files within an asset.
