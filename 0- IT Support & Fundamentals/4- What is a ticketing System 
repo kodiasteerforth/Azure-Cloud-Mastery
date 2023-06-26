@@ -1,0 +1,22 @@
+# What is  a Ticketing System ?
+A ticketing system, also known as a support ticket system or issue tracking system, is a software application that enables organizations to effectively manage and track customer inquiries, requests, and reported issues. It provides a centralized platform for capturing, organizing, prioritizing, and resolving customer support or service-related incidents.
+
+In a ticketing system, each customer inquiry or reported issue is typically represented as a "ticket" or a record within the system. When a customer contacts the organization with a problem or request, a ticket is created, capturing relevant details such as the customer's information, description of the issue, and any associated files or documentation.
+
+The key components and functionalities of a ticketing system include:
+
+1. Ticket Creation: When a customer contacts the organization, a new ticket is created in the system. This can be done through various channels such as email, web forms, or phone calls. The ticket captures essential information about the customer, the nature of the issue, and any supporting details.
+
+2. Ticket Assignment and Prioritization: Tickets are typically assigned to specific support agents or teams based on their expertise or workload. They may be prioritized based on urgency or impact, ensuring that critical issues receive prompt attention.
+
+3. Ticket Tracking and Updates: Throughout the lifecycle of a ticket, it is tracked and updated with relevant information. Support agents can add notes, communicate with the customer, and log any actions taken to address the issue. This allows for transparency and effective communication between the support team and the customer.
+
+4. Escalation and Collaboration: In cases where an issue requires additional expertise or involvement from higher-level support, a ticketing system enables escalation and collaboration among support agents. It allows for the seamless transfer of tickets and collaboration to ensure timely resolution.
+
+5. SLA Management: Ticketing systems often include service level agreement (SLA) management features. SLAs define the response and resolution timeframes for different types of tickets, ensuring that support teams adhere to the agreed-upon service standards.
+
+6. Knowledge Base Integration: Many ticketing systems integrate with knowledge base systems, allowing support agents to access relevant articles, documentation, or solutions to common issues. This helps in providing consistent and accurate responses to customer inquiries.
+
+7. Reporting and Analytics: Ticketing systems provide reporting and analytics capabilities to track key performance indicators (KPIs) such as ticket volume, response times, resolution rates, and customer satisfaction metrics. This data helps organizations evaluate the efficiency and effectiveness of their support operations.
+
+Ticketing systems are commonly used in customer support, IT service management, and help desk environments, enabling organizations to streamline their support processes, improve response times, and enhance customer satisfaction. By centralizing and automating ticket management, organizations can efficiently handle customer inquiries, track progress, and ensure timely resolution of issues.
