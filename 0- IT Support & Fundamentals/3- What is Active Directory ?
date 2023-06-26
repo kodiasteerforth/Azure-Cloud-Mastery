@@ -1,0 +1,85 @@
+
+# OVERVIEW OF ACTIVE DIRECTORY AND CONCEPTS 
+
+# What is an Operating System ?
+An operating system (OS) is a software program that acts as an intermediary between the hardware of a computer system and the software applications running on it. It is a fundamental component of any computer system, providing essential services and managing the resources of the system.
+
+The primary functions of an operating system include:
+
+1. Process Management: The OS manages and schedules processes (also known as tasks or programs) running on the computer. It allocates CPU time, memory, and other system resources to ensure efficient execution of processes.
+
+2. Memory Management: The OS handles the management of system memory. It allocates memory to processes, manages memory swapping between RAM and disk storage, and ensures efficient memory utilization.
+
+3. File System Management: The OS provides a hierarchical structure and management system for organizing and storing files on storage devices such as hard drives. It enables file creation, deletion, and access control.
+
+4. Device Management: The OS interacts with and manages various hardware devices attached to the computer, such as printers, scanners, keyboards, and network adapters. It provides device drivers to facilitate communication between software and hardware components.
+
+5. User Interface: The OS provides a user interface (UI) through which users can interact with the computer system. This can be in the form of a command-line interface (CLI) or a graphical user interface (GUI) that allows users to perform tasks and access system resources.
+
+6. Security and Protection: The OS enforces security measures to protect the computer system and user data. It manages user authentication, access control, and implements security policies to prevent unauthorized access and ensure data integrity.
+
+7. Networking: Many modern operating systems include networking capabilities to enable communication and data transfer between computers over a network. They provide network protocols and services for connecting to the internet, sharing resources, and facilitating network communication.
+
+Examples of popular operating systems include Microsoft Windows, macOS (formerly Mac OS X), Linux, and Unix. Each operating system has its own features, design principles, and target environments, catering to the specific needs of different types of users and computing devices.
+
+Overall, an operating system acts as the backbone of a computer system, providing essential services and managing resources to enable the execution of applications and facilitate user interaction with the hardware and software components.
+
+
+# Hardware vs. Software:
+   - Hardware refers to the physical components of a computer system, such as the CPU, RAM, hard drive, motherboard, graphics card, etc.
+   - Software refers to the programs and data that are stored on and executed by the hardware. Examples of software include operating systems, applications, and games.
+
+# RAM (Random Access Memory):
+   - RAM is a type of computer memory that is used for temporarily storing data that the CPU needs to access quickly.
+   - It allows the computer to efficiently run programs and perform tasks by providing fast and temporary storage for data and instructions.
+
+# CPU (Central Processing Unit):
+   - The CPU is the "brain" of the computer that performs most of the calculations and executes instructions.
+   - It carries out basic arithmetic, logical, control, and input/output operations specified by the software.
+
+# Hard Drive:
+   - A hard drive is a storage device used to store and retrieve data on a long-term basis.
+   - It provides non-volatile storage for the operating system, applications, files, and other data.
+
+# User Input/Output:
+   - User input/output refers to the interaction between the user and the computer system.
+   - It includes devices such as keyboards, mouse, monitors, printers, and speakers that allow users to input commands and receive output from the computer.
+
+# Motherboard:
+   - The motherboard is the main circuit board of a computer system.
+   - It connects and allows communication between various hardware components, such as the CPU, RAM, hard drive, and peripherals.
+
+# Graphics Card:
+   - A graphics card (also known as a video card or GPU) is a specialized hardware component that is responsible for rendering images, videos, and graphics.
+   - It offloads graphics processing from the CPU and enhances the computer's ability to display high-quality visuals.
+
+# 32-bit vs. 64-bit:
+   - Refers to the architecture of a computer's operating system and CPU.
+   - A 32-bit system can address up to 4 GB of RAM, while a 64-bit system can handle much larger amounts of memory and can perform better with certain applications and tasks.
+
+# Server:
+   - A server is a computer or system that provides services or resources to other computers, known as clients, over a network.
+   - Servers can handle tasks such as hosting websites, managing databases, providing file storage, and facilitating network communication.
+
+# What is Active Directory ?
+Active Directory (AD) is a directory service developed by Microsoft that provides centralized management and authentication of network resources in a Windows domain environment. It is a key component of the Windows Server operating system and plays a crucial role in enterprise network management.
+
+Active Directory serves as a centralized database that stores information about network resources such as users, computers, groups, printers, and other network devices. It provides a hierarchical structure called a domain, which organizes these resources and allows for efficient management and control.
+
+Key components and features of Active Directory include:
+
+1. Domain Controller (DC): A domain controller is a server running the Active Directory Domain Services (AD DS) role. It stores the Active Directory database and responds to authentication and authorization requests from client computers.
+
+2. User and Group Management: Active Directory allows administrators to create and manage user accounts and groups. User accounts contain information such as usernames, passwords, contact details, and group memberships, while groups are used to organize and assign permissions to multiple users simultaneously.
+
+3. Authentication and Single Sign-On (SSO): Active Directory provides authentication services, allowing users to log in to their computers and access network resources using a single set of credentials. Once authenticated, users can access resources across the network without the need for repeated login prompts (Single Sign-On).
+
+4. Security and Access Control: Active Directory enables administrators to set access controls and permissions on various network resources. This allows for granular control over who can access files, folders, printers, applications, and other network services.
+
+5. Group Policy: Group Policy is a powerful feature of Active Directory that allows administrators to define and enforce computer and user settings across the network. It enables centralized management of security policies, software deployment, desktop configurations, and more.
+
+6. Directory Replication: Active Directory uses replication to synchronize directory information between multiple domain controllers within a domain. This ensures that changes made to the directory on one domain controller are propagated to others, providing redundancy and fault tolerance.
+
+7. Trust Relationships: Active Directory supports the establishment of trust relationships between domains, both within the same forest (Intra-forest trusts) and across different forests (Inter-forest trusts). Trust relationships enable users in one domain to access resources in another domain.
+
+Active Directory is widely used in enterprise environments to manage large networks, provide secure access to resources, and streamline administration tasks. It simplifies user and resource management, enhances security, and enables efficient collaboration and resource sharing within an organization.
