@@ -1,0 +1,97 @@
+# Azure  Command	      
+
+# az login     
+Logs in to Azure.
+
+# az account list	     
+Lists all Azure subscriptions.
+
+# az group create	     
+Creates a new resource group.
+
+# az vm create	     
+Creates a virtual machine.
+
+# az storage account create	
+Creates a storage account.
+
+# az network vnet create	
+Creates a virtual network.
+
+# az webapp create	    
+Creates a web app.
+
+# az sql server create	
+Creates an Azure SQL Server.
+
+# az cosmosdb account create	
+Creates an Azure Cosmos DB account.
+
+# az functionapp create	
+Creates an Azure Function App.
+
+# az appservice plan create	
+Creates an App Service plan.
+
+# az keyvault create	
+Creates an Azure Key Vault.
+
+# az aks create	
+Creates an Azure Kubernetes Service cluster.
+
+# az monitor diagnostic-settings create	
+Creates diagnostic settings for a resource.
+
+# az network lb create	
+Creates a load balancer.
+
+# az container create	
+Creates an Azure Container Instance.
+
+# az eventgrid topic create	
+Creates an Event Grid topic.
+
+# az redis create	
+Creates an Azure Cache for Redis.
+
+# az servicebus namespace create	
+Creates an Azure Service Bus namespace.
+
+# az signalr create	
+Creates an Azure SignalR Service.
+
+# az appconfig kv set	
+Sets a key-value pair in Azure App Configuration.
+
+# az eventhubs namespace create	
+Creates an Azure Event Hubs namespace.
+
+# az storage container create	
+Creates a storage container in Azure Storage.
+
+# az keyvault secret set	
+Sets a secret in Azure Key Vault.
+
+# az functionapp deployment source config-zip	
+Deploys a ZIP package to an Azure Function App.
+
+# Remove-AzVM	   
+Deletes an Azure VM.
+
+# Start-AzVM	   
+Start a stopped VM.
+
+# Stop-AzVM	   
+Stop a running VM.
+
+# Restart-AzVM   
+Restart a VM.
+
+# Update-AzVM	   
+Updates the configuration for a VM.
+
+# Connect-AzAccount  
+Prompts for your Azure credentials, then connects to your Azure subs.
+
+
+
