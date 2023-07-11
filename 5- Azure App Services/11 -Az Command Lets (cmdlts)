@@ -93,5 +93,5 @@ Updates the configuration for a VM.
 # Connect-AzAccount  
 Prompts for your Azure credentials, then connects to your Azure subs.
 
-
-
+# az group create --name Windows-VMs --location eastus
+The command "az group create" creates a new resource group in Azure with the given name and location, such as "Windows-VMs" in the "eastus" region. Resource groups help organize and manage Azure resources.
