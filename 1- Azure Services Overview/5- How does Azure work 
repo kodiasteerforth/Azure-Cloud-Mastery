@@ -103,7 +103,7 @@ The account administrator role is assigned to the email account that's used to c
 
 By default, the service administrator role for a subscription is also assigned to the email account that's used to create the Azure subscription. The service administrator has permissions to the subscription equivalent to the Azure role-based access control Owner role. The service administrator also has full access to the Azure portal. The account administrator can change the service administrator to a different email account.
 
-When you create an Azure subscription, you can associate it with an existing Azure AD tenant. Otherwise, creating a new subscription creates a new Azure AD tenant with an associated directory. Assign the global administrator role in the Azure AD directory to the email account used to create the Azure AD subscription.
+When you create an Azure subscription, you can associate it with an existing Azure AD tenant. Otherwise, creating a new subscription creates a new Azure AD tenant with an associated directory. Assign the global administrator role in the Azure AD to the email account used to create the Azure AD subscription.
 
 You can associate an email account with multiple Azure subscriptions. An account administrator can transfer a subscription to another account.
 
